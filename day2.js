@@ -120,4 +120,13 @@ humantwo.addAge();
     If the length is greater than ten console log "Big word". 
     If the length of the string is less than 10 console log "Small Number"
 */
-
+let isStringGreater = (str) => {
+    return new Promise((resolve, reject) =>{
+        if (str.length > 10){
+            resolve(str);
+        }else{
+            reject(str);
+        }
+    })
+}
+isStringGreater('The man is tired').then( (result) => {console.log(`Big Word ${result}.`);}).catch( (result) => {console.log(`Small Number ${result}.`);})
