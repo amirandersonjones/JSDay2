@@ -53,8 +53,7 @@ Create two people using the 'new' keyword, and print
 both of their infos and increment one persons
 age by 3 years. Use an arrow function for both methods
 */
-
-// Create our Person Prototype
+//Regular class method
 function Person(name, sex, age){
     this.name= name;
     this.sex = sex;
@@ -63,7 +62,7 @@ function Person(name, sex, age){
         console.log(`This person's name is ${this.name}. Their sex is ${this.sex} and they are ${this.age} years old!`);
     };
     this.addAge = function(){
-        console.log
+        this.age +=1
     };
 }
 
@@ -76,7 +75,28 @@ persontwo.printInfo()
 let personthree = new Person('Amir', 'male', '36');
 personthree.printInfo()
 
-// // Use an arrow to create the printInfo method
+// Create our Person Prototype
+
+function Human(name, sex, age,){
+    this.name= name;
+    this.sex = sex;
+    this.age = age;
+    
+    //this could be an arrow function
+    this.printInfo = () => {
+        console.log(`This person's name is ${this.name}. Their sex is ${this.sex} and they are ${this.age} years old!`);
+    };
+    this.addAge = function(){
+        this.age +=1
+    };
+}
+// Use an arrow to create the printInfo method
+let humanone = new Human('Jessica Brown', 'female', '36');
+humanone.printInfo();
+let humantwo = new Human('Bobby Brown', 'male', '68');
+humantwo.printInfo();
+humantwo.addAge();
+
 
 // Create another arrow function for the addAge method that takes a single parameter
 // Adding to the age 
