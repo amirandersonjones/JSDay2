@@ -42,6 +42,15 @@ let person3 = {
         cupids_candies:"Chocolate Malt"
     }]
 }
+let personsFavoritefood = function(foods) {
+    for (property in person3){
+        console.log(property, person3[property]);
+    }
+}
+//REGULAR LOOP TO GET INFO
+for (property in person3){
+     console.log(property, person3[property]);
+ }
 
 
 //=======Exercise #2=========//
@@ -86,8 +95,9 @@ function Human(name, sex, age,){
     this.printInfo = () => {
         console.log(`This person's name is ${this.name}. Their sex is ${this.sex} and they are ${this.age} years old!`);
     };
-    this.addAge = function(){
-        this.age +=1
+    this.addAge = () => {
+        newage = ++age
+        console.log(newage)
     };
 }
 // Use an arrow to create the printInfo method
@@ -96,7 +106,8 @@ humanone.printInfo();
 let humantwo = new Human('Bobby Brown', 'male', '68');
 humantwo.printInfo();
 humantwo.addAge();
-
+humantwo.addAge();
+humantwo.addAge();
 
 // Create another arrow function for the addAge method that takes a single parameter
 // Adding to the age 
