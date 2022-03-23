@@ -55,9 +55,20 @@ age by 3 years. Use an arrow function for both methods
 */
 
 // Create our Person Prototype
+function Person(name, sex, age){
+    this.name= name;
+    this.sex = sex;
+    this.age = age;
+    this.printInfo = function(){
+        console.log(`This person's name is ${this.name}. Their sex is ${this.sex} and they are ${this.age} years old!`)
+    };
+    this.addAge = function(){
+        console.log
+    };
+}
 
 
-// Use an arrow to create the printInfo method
+// // Use an arrow to create the printInfo method
 
 // Create another arrow function for the addAge method that takes a single parameter
 // Adding to the age 
