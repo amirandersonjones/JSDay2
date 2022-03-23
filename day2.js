@@ -60,13 +60,21 @@ function Person(name, sex, age){
     this.sex = sex;
     this.age = age;
     this.printInfo = function(){
-        console.log(`This person's name is ${this.name}. Their sex is ${this.sex} and they are ${this.age} years old!`)
+        console.log(`This person's name is ${this.name}. Their sex is ${this.sex} and they are ${this.age} years old!`);
     };
     this.addAge = function(){
         console.log
     };
 }
 
+let personone = new Person('Kellie Hill', 'female', '50');
+personone.printInfo()
+
+let persontwo = new Person('Queen Brown', 'female', '65');
+persontwo.printInfo()
+
+let personthree = new Person('Amir', 'male', '36');
+personthree.printInfo()
 
 // // Use an arrow to create the printInfo method
 
